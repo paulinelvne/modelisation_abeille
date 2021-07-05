@@ -13131,6 +13131,11 @@ div#notebook {
 
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">widgets</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 
     </div>
@@ -13151,7 +13156,7 @@ div#notebook {
 <span class="n">Label_ab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Poids abeille en mg&#39;</span><span class="p">)</span>
 <span class="n">pds_ab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
 
-<span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label</span><span class="p">,</span><span class="n">pds_ab</span><span class="p">])</span>
+<span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_ab</span><span class="p">,</span><span class="n">pds_ab</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13303,7 +13308,7 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
 <span class="n">Label_temp</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Température moyenne en °C&#39;</span><span class="p">)</span>
-<span class="n">temp</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">()</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
 
 <span class="n">Label_temp1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Température moyenne en °C à J-1&#39;</span><span class="p">)</span>
 <span class="n">temp1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
@@ -13432,24 +13437,6 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">dic_jour</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;lundi&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;mardi&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;mercredi&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;jeudi&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;vendredi&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;samedi&quot;</span> <span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;dimanche&quot;</span> <span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="nbinteract-hide_in
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
 <span class="n">jour</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
 <span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;lundi&#39;</span><span class="p">,</span>
 <span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;lundi&#39;</span><span class="p">,</span> <span class="s1">&#39;mardi&#39;</span><span class="p">,</span> <span class="s1">&#39;mercredi&#39;</span><span class="p">,</span> <span class="s1">&#39;jeudi&#39;</span><span class="p">,</span> <span class="s1">&#39;vendredi&#39;</span><span class="p">,</span> <span class="s1">&#39;samedi&#39;</span><span class="p">,</span> <span class="s1">&#39;dimanche&#39;</span><span class="p">],</span>
@@ -13494,48 +13481,11 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">dic_region</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Auvergne Rhone Alpes&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Normandie&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Nouvelle Aquitaine&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Occitanie&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Pays de la loire&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="nbinteract-hide_in
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
 <span class="n">region</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
 <span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Auvergne Rhone Alpes&#39;</span><span class="p">,</span>
 <span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Auvergne Rhone Alpes&quot;</span><span class="p">,</span> <span class="s2">&quot;Normandie&quot;</span><span class="p">,</span> <span class="s2">&quot;Nouvelle Aquitaine&quot;</span><span class="p">,</span> <span class="s2">&quot;Occitanie&quot;</span><span class="p">,</span> <span class="s2">&quot;Pays de la loire&quot;</span><span class="p">],</span>
 <span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Région :&#39;</span>
 <span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="nbinteract-hide_in
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">dic_depart</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Ain&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Ariege&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Cantal&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> 
-              <span class="s2">&quot;Hte Vienne&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Isere&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;Loire Atlantique&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Maine et Loire&quot;</span> <span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Seine Maritime&quot;</span> <span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
 </pre></div>
 
     </div>
@@ -13614,47 +13564,11 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">dic_saison</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Printemps&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Hiver (trouvée après le 01/09)&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="nbinteract-hide_in
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
 <span class="n">saison</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span>
 <span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Printemps&#39;</span><span class="p">,</span>
 <span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Printemps&#39;</span><span class="p">,</span> <span class="s1">&#39;Hiver (trouvée après le 01/09)&#39;</span><span class="p">],</span>
 <span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Saison:&#39;</span>
 <span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="nbinteract-hide_in
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">dic_expo_lum</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;soleil&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;mi_soleil (soleil à partir de 15h)&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;ombre&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 </pre></div>
 
     </div>
@@ -13694,47 +13608,11 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">dic_expo_vent</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;abrite&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;mi&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;vent&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="nbinteract-hide_in
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
 <span class="n">expo_vent</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span>
 <span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;abrite&#39;</span><span class="p">,</span>
 <span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;abrite&quot;</span><span class="p">,</span> <span class="s2">&quot;mi&quot;</span><span class="p">,</span> <span class="s2">&quot;vent&quot;</span><span class="p">],</span>
 <span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Exposition au vent :&#39;</span>
 <span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="nbinteract-hide_in
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">dic_orientation</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Est&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="s2">&quot;Ouest&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="s2">&quot;Sud&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="s2">&quot;Sud-Est&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
 </pre></div>
 
     </div>
@@ -13816,45 +13694,11 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="nbinteract-hide_in
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
 <span class="n">type_r</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span>
 <span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Ruche&#39;</span><span class="p">,</span>
 <span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ruche&#39;</span><span class="p">,</span> <span class="s1">&#39;Ruchette&#39;</span><span class="p">],</span>
 <span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Type :&#39;</span>
 <span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="nbinteract-hide_in
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
 </pre></div>
 
     </div>
@@ -13939,8 +13783,75 @@ div#notebook {
             
             <span class="n">dic_race</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Hybride&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Noire&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
             <span class="n">dic_type</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Ruche&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Ruchette&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+            <span class="n">dic_orientation</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Est&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="s2">&quot;Ouest&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="s2">&quot;Sud&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="s2">&quot;Sud-Est&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+            <span class="n">dic_expo_vent</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;abrite&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;mi&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;vent&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+            <span class="n">dic_expo_lum</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;soleil&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;mi_soleil (soleil à partir de 15h)&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;ombre&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+            <span class="n">dic_saison</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Printemps&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Hiver (trouvée après le 01/09)&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+            <span class="n">dic_depart</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Ain&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Ariege&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Cantal&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Hte Vienne&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Isere&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span> 
+                          <span class="s2">&quot;Loire Atlantique&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Maine et Loire&quot;</span> <span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Seine Maritime&quot;</span> <span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+            <span class="n">dic_region</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Auvergne Rhone Alpes&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Normandie&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> 
+                          <span class="s2">&quot;Nouvelle Aquitaine&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Occitanie&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Pays de la loire&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+            <span class="n">dic_jour</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;lundi&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;mardi&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;mercredi&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;jeudi&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;vendredi&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;samedi&quot;</span> <span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;dimanche&quot;</span> <span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
             
-            <span class="nb">print</span><span class="p">(</span><span class="n">dic_race</span><span class="p">[</span><span class="n">race</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> <span class="n">dic_type</span><span class="p">[</span><span class="n">type_r</span><span class="o">.</span><span class="n">value</span><span class="p">])</span>
+            
+            
+            <span class="n">name_column</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;pdsab_calc&quot;</span><span class="p">,</span> <span class="s2">&quot;saison_exp&quot;</span><span class="p">,</span> <span class="s2">&quot;expo_lum&quot;</span><span class="p">,</span> <span class="s2">&quot;expo_vent&quot;</span><span class="p">,</span> <span class="s2">&quot;orientation&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;race&quot;</span><span class="p">,</span> <span class="s2">&quot;precipitation&quot;</span><span class="p">,</span> 
+                           <span class="s2">&quot;humidite&quot;</span><span class="p">,</span> <span class="s2">&quot;moy_temp&quot;</span><span class="p">,</span> <span class="s2">&quot;precipitation_J1&quot;</span><span class="p">,</span> <span class="s2">&quot;precipitation_J2&quot;</span><span class="p">,</span> <span class="s2">&quot;precipitation_J3&quot;</span><span class="p">,</span> <span class="s2">&quot;humidite_J1&quot;</span><span class="p">,</span> 
+                           <span class="s2">&quot;humidite_J2&quot;</span><span class="p">,</span> <span class="s2">&quot;humidite_J3&quot;</span><span class="p">,</span> <span class="s2">&quot;moy_temp_J1&quot;</span><span class="p">,</span> <span class="s2">&quot;moy_temp_J2&quot;</span><span class="p">,</span> <span class="s2">&quot;moy_temp_J3&quot;</span><span class="p">,</span> <span class="s2">&quot;Departement&quot;</span><span class="p">,</span> <span class="s2">&quot;Region&quot;</span><span class="p">,</span> <span class="s2">&quot;meteo_km&quot;</span><span class="p">,</span> 
+                           <span class="s2">&quot;alt_meteo_m&quot;</span><span class="p">,</span> <span class="s2">&quot;alt_site_m&quot;</span><span class="p">,</span> <span class="s2">&quot;semaine&quot;</span><span class="p">,</span> <span class="s2">&quot;jour&quot;</span><span class="p">]</span>
+            <span class="n">list_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">pds_ab</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">dic_saison</span><span class="p">[</span><span class="n">saison</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> <span class="n">dic_expo_lum</span><span class="p">[</span><span class="n">expo_lum</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> <span class="n">dic_expo_vent</span><span class="p">[</span><span class="n">expo_vent</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> 
+                         <span class="n">dic_orientation</span><span class="p">[</span><span class="n">orientation</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> <span class="n">dic_type</span><span class="p">[</span><span class="n">type_r</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> <span class="n">dic_race</span><span class="p">[</span><span class="n">race</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> <span class="n">prec</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">hum</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> 
+                         <span class="n">temp</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">prec1</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">prec2</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">prec3</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">hum1</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">hum2</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">hum3</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">temp1</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">temp2</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> 
+                         <span class="n">temp3</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">dic_depart</span><span class="p">[</span><span class="n">depart</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> <span class="n">dic_region</span><span class="p">[</span><span class="n">region</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> <span class="n">dist_met</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">alt_met</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">alt_site</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> 
+                         <span class="n">sem</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">dic_jour</span><span class="p">[</span><span class="n">jour</span><span class="o">.</span><span class="n">value</span><span class="p">]]])</span>
+            <span class="n">pred</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">list_pred</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">name_column</span><span class="p">)</span>
+            
+            
+            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;info_tot_ab.csv&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">decimal</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
+            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">])</span>
+            <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;semaine1&quot;</span><span class="p">,</span> <span class="s2">&quot;semaine2&quot;</span><span class="p">,</span> <span class="s2">&quot;semaine3&quot;</span><span class="p">,</span> <span class="s2">&quot;semaine4&quot;</span><span class="p">]</span>
+            <span class="n">filtered_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">semaine</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">values</span><span class="p">)]</span>
+            <span class="n">index_with_nan</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">filtered_df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span>
+            <span class="n">filtered_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">index_with_nan</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            
+            <span class="n">y</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="p">[</span><span class="s2">&quot;num_jour&quot;</span><span class="p">]</span>
+            <span class="n">X</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+            <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;num_jour&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;semaine&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;site_lot_nbab&quot;</span><span class="p">]</span>
+            <span class="n">X</span><span class="p">[</span><span class="s2">&quot;semaine&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">isocalendar</span><span class="p">()[</span><span class="s2">&quot;week&quot;</span><span class="p">]</span>
+            <span class="n">X</span><span class="p">[</span><span class="s2">&quot;jour&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">isocalendar</span><span class="p">()[</span><span class="s2">&quot;day&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;nbab&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;cadre&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;cause_mort&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;origine&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;somme_precipitation_7&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;somme_precipitation_3&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;temp_12h&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;lot&quot;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="s2">&quot;site&quot;</span><span class="p">]</span>
+            
+            <span class="n">X</span><span class="p">[</span><span class="s2">&quot;Departement&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="s2">&quot;Departement&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
+            <span class="n">X</span><span class="p">[</span><span class="s2">&quot;Region&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="s2">&quot;Region&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
+            <span class="n">X</span><span class="p">[</span><span class="s2">&quot;saison_exp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="s2">&quot;saison_exp&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
+            <span class="n">X</span><span class="p">[</span><span class="s2">&quot;expo_lum&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="s2">&quot;expo_lum&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
+            <span class="n">X</span><span class="p">[</span><span class="s2">&quot;expo_vent&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="s2">&quot;expo_vent&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
+            <span class="n">X</span><span class="p">[</span><span class="s2">&quot;orientation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="s2">&quot;orientation&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
+            <span class="n">X</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
+            <span class="n">X</span><span class="p">[</span><span class="s2">&quot;race&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="s2">&quot;race&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
+            
+            <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">dt</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+            <span class="n">dt</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+            <span class="n">y_predict</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+            
+            <span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_predict</span><span class="p">))</span>
+            
+            <span class="nb">print</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_predict</span><span class="p">))</span>
+            
+            <span class="nb">print</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pred</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -14001,6 +13912,23 @@ div#notebook {
 
 </div>
 
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 

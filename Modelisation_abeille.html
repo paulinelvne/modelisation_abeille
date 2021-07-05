@@ -13147,25 +13147,10 @@ div#notebook {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
-</pre></div>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Label_ab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Poids abeille en mg&#39;</span><span class="p">)</span>
+<span class="n">pds_ab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
 
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label</span><span class="p">,</span><span class="n">pds_ab</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13190,18 +13175,6 @@ div#notebook {
 
 </div>
 
-<div class="output_area">
-
-    
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;function __main__.square(x)&gt;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13215,25 +13188,24 @@ div#notebook {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">friends</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> has </span><span class="si">{}</span><span class="s1"> friends !&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
-</pre></div>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Label_prec</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Précipitation en mm&#39;</span><span class="p">)</span>
+<span class="n">prec</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
 
-    </div>
-</div>
-</div>
+<span class="n">Label_prec1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Précipitation en mm à J-1&#39;</span><span class="p">)</span>
+<span class="n">prec1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
 
-  </div>
+<span class="n">Label_prec2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Précipitation en mm à J-2&#39;</span><span class="p">)</span>
+<span class="n">prec2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
 
-  
+<span class="n">Label_prec3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Précipitation en mm à J-3&#39;</span><span class="p">)</span>
+<span class="n">prec3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
 
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
+<span class="n">vbox1prec</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_prec</span><span class="p">,</span><span class="n">prec</span><span class="p">,</span> <span class="n">Label_prec1</span><span class="p">,</span><span class="n">prec1</span><span class="p">])</span>
+<span class="c1">#vbox2 = widgets.VBox([Label_prec1,prec1])</span>
+<span class="n">vbox3prec</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_prec2</span><span class="p">,</span><span class="n">prec2</span><span class="p">,</span> <span class="n">Label_prec3</span><span class="p">,</span><span class="n">prec3</span><span class="p">])</span>
+<span class="c1">#vbox4 = widgets.VBox([Label_prec3,prec3])</span>
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">friends</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Sam&#39;</span><span class="p">,</span> <span class="n">number</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">vbox1prec</span><span class="p">,</span> <span class="n">vbox3prec</span><span class="p">])</span><span class="c1">#, vbox3, vbox4])</span>
 </pre></div>
 
     </div>
@@ -13258,18 +13230,6 @@ div#notebook {
 
 </div>
 
-<div class="output_area">
-
-    
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;function __main__.friends(name, number)&gt;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13283,7 +13243,24 @@ div#notebook {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">friends</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Sam&#39;</span><span class="p">,</span> <span class="n">number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;One&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Five&#39;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Ten&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">})</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Label_hum</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Humidité en %&#39;</span><span class="p">)</span>
+<span class="n">hum</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+
+<span class="n">Label_hum1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Humidité en % à J-1&#39;</span><span class="p">)</span>
+<span class="n">hum1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+
+<span class="n">Label_hum2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Humidité en % à J-2&#39;</span><span class="p">)</span>
+<span class="n">hum2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+
+<span class="n">Label_hum3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Humidité en % à J-3&#39;</span><span class="p">)</span>
+<span class="n">hum3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+
+<span class="n">vbox1hum</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_hum</span><span class="p">,</span> <span class="n">hum</span><span class="p">,</span> <span class="n">Label_hum1</span><span class="p">,</span> <span class="n">hum1</span><span class="p">])</span>
+<span class="c1">#vbox2 = widgets.VBox([Label_prec1,prec1])</span>
+<span class="n">vbox3hum</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_hum2</span><span class="p">,</span> <span class="n">hum2</span><span class="p">,</span> <span class="n">Label_hum3</span><span class="p">,</span> <span class="n">hum3</span><span class="p">])</span>
+<span class="c1">#vbox4 = widgets.VBox([Label_prec3,prec3])</span>
+
+<span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">vbox1hum</span><span class="p">,</span> <span class="n">vbox3hum</span><span class="p">])</span><span class="c1">#, vbox3, vbox4])</span>
 </pre></div>
 
     </div>
@@ -13308,15 +13285,58 @@ div#notebook {
 
 </div>
 
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Label_temp</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Température moyenne en °C&#39;</span><span class="p">)</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">()</span>
+
+<span class="n">Label_temp1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Température moyenne en °C à J-1&#39;</span><span class="p">)</span>
+<span class="n">temp1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+
+<span class="n">Label_temp2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Température moyenne en °C à J-2&#39;</span><span class="p">)</span>
+<span class="n">temp2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+
+<span class="n">Label_temp3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Température moyenne en °C à J-3&#39;</span><span class="p">)</span>
+<span class="n">temp3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+
+<span class="n">vbox1temp</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_temp</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="n">Label_temp1</span><span class="p">,</span> <span class="n">temp1</span><span class="p">])</span>
+<span class="c1">#vbox2 = widgets.VBox([Label_prec1,prec1])</span>
+<span class="n">vbox3temp</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_temp2</span><span class="p">,</span> <span class="n">temp2</span><span class="p">,</span> <span class="n">Label_temp3</span><span class="p">,</span> <span class="n">temp3</span><span class="p">])</span>
+<span class="c1">#vbox4 = widgets.VBox([Label_prec3,prec3])</span>
+
+<span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">vbox1temp</span><span class="p">,</span> <span class="n">vbox3temp</span><span class="p">])</span><span class="c1">#, vbox3, vbox4])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
 <div class="output_area">
 
     
 
 
 
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;function __main__.friends(name, number)&gt;</pre>
-</div>
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
 
 </div>
 
@@ -13333,8 +13353,565 @@ div#notebook {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">affiche</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je m&#39;affiche correctement maintenant&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Label_dist_met</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Distance station météo - site en km&#39;</span><span class="p">)</span>
+<span class="n">dist_met</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+
+<span class="n">Label_alt_met</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Altitude station météo en m&#39;</span><span class="p">)</span>
+<span class="n">alt_met</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+
+<span class="n">Label_alt_site</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Altitude site en m&#39;</span><span class="p">)</span>
+<span class="n">alt_site</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+
+<span class="n">vbox1dist</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_dist_met</span><span class="p">,</span> <span class="n">dist_met</span><span class="p">,</span> <span class="n">Label_alt_site</span><span class="p">,</span> <span class="n">alt_site</span><span class="p">])</span>
+<span class="c1">#vbox2 = widgets.VBox([Label_prec1,prec1])</span>
+<span class="n">vbox3dist</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_alt_met</span><span class="p">,</span> <span class="n">alt_met</span><span class="p">])</span>
+<span class="c1">#vbox4 = widgets.VBox([Label_prec3,prec3])</span>
+
+<span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">vbox1dist</span><span class="p">,</span> <span class="n">vbox3dist</span><span class="p">])</span><span class="c1">#, vbox3, vbox4])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Label_sem</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s2">&quot;Numéro de la semaine dans l&#39;année&quot;</span><span class="p">)</span>
+<span class="n">sem</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntText</span><span class="p">()</span>
+
+<span class="n">vbox_date</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_sem</span><span class="p">,</span> <span class="n">sem</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dic_jour</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;lundi&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;mardi&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;mercredi&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;jeudi&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;vendredi&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;samedi&quot;</span> <span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;dimanche&quot;</span> <span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">jour</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;lundi&#39;</span><span class="p">,</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;lundi&#39;</span><span class="p">,</span> <span class="s1">&#39;mardi&#39;</span><span class="p">,</span> <span class="s1">&#39;mercredi&#39;</span><span class="p">,</span> <span class="s1">&#39;jeudi&#39;</span><span class="p">,</span> <span class="s1">&#39;vendredi&#39;</span><span class="p">,</span> <span class="s1">&#39;samedi&#39;</span><span class="p">,</span> <span class="s1">&#39;dimanche&#39;</span><span class="p">],</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Jour :&#39;</span>
+<span class="p">)</span>
+<span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">vbox_date</span><span class="p">,</span> <span class="n">jour</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dic_region</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Auvergne Rhone Alpes&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Normandie&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Nouvelle Aquitaine&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Occitanie&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Pays de la loire&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">region</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Auvergne Rhone Alpes&#39;</span><span class="p">,</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Auvergne Rhone Alpes&quot;</span><span class="p">,</span> <span class="s2">&quot;Normandie&quot;</span><span class="p">,</span> <span class="s2">&quot;Nouvelle Aquitaine&quot;</span><span class="p">,</span> <span class="s2">&quot;Occitanie&quot;</span><span class="p">,</span> <span class="s2">&quot;Pays de la loire&quot;</span><span class="p">],</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Région :&#39;</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dic_depart</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Ain&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Ariege&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Cantal&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> 
+              <span class="s2">&quot;Hte Vienne&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Isere&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;Loire Atlantique&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Maine et Loire&quot;</span> <span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Seine Maritime&quot;</span> <span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">depart</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Ain&#39;</span><span class="p">,</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ain&quot;</span><span class="p">,</span> <span class="s2">&quot;Ariege&quot;</span><span class="p">,</span> <span class="s2">&quot;Cantal&quot;</span><span class="p">,</span> <span class="s2">&quot;Hte Vienne&quot;</span><span class="p">,</span> <span class="s2">&quot;Isere&quot;</span><span class="p">,</span> <span class="s2">&quot;Loire Atlantique&quot;</span><span class="p">,</span> <span class="s2">&quot;Maine et Loire&quot;</span><span class="p">,</span> <span class="s2">&quot;Seine Maritime&quot;</span><span class="p">],</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Département :&#39;</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">region</span><span class="p">,</span> <span class="n">depart</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dic_saison</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Printemps&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Hiver (trouvée après le 01/09)&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">saison</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span>
+<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Printemps&#39;</span><span class="p">,</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Printemps&#39;</span><span class="p">,</span> <span class="s1">&#39;Hiver (trouvée après le 01/09)&#39;</span><span class="p">],</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Saison:&#39;</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dic_expo_lum</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;soleil&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;mi_soleil (soleil à partir de 15h)&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;ombre&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expo_lum</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span>
+<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;soleil&#39;</span><span class="p">,</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;soleil&quot;</span><span class="p">,</span> <span class="s2">&quot;mi_soleil (soleil à partir de 15h)&quot;</span><span class="p">,</span> <span class="s2">&quot;ombre&quot;</span><span class="p">],</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Exposition à la lumière :&#39;</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dic_expo_vent</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;abrite&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;mi&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;vent&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expo_vent</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span>
+<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;abrite&#39;</span><span class="p">,</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;abrite&quot;</span><span class="p">,</span> <span class="s2">&quot;mi&quot;</span><span class="p">,</span> <span class="s2">&quot;vent&quot;</span><span class="p">],</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Exposition au vent :&#39;</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dic_orientation</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Est&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="s2">&quot;Ouest&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="s2">&quot;Sud&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="s2">&quot;Sud-Est&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">orientation</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span>
+<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Est&#39;</span><span class="p">,</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Est&quot;</span><span class="p">,</span>  <span class="s2">&quot;Ouest&quot;</span><span class="p">,</span>  <span class="s2">&quot;Sud&quot;</span><span class="p">,</span>  <span class="s2">&quot;Sud-Est&quot;</span><span class="p">],</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Orientation de l&#39;entrée de la ruche:&quot;</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vbox_ruche1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">expo_lum</span><span class="p">,</span><span class="n">saison</span><span class="p">])</span>
+<span class="n">vbox_ruche2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">expo_vent</span><span class="p">,</span> <span class="n">orientation</span><span class="p">])</span>
+
+<span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">vbox_ruche1</span><span class="p">,</span> <span class="n">vbox_ruche2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dic_type</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Ruche&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Ruchette&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">type_r</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span>
+<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Ruche&#39;</span><span class="p">,</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ruche&#39;</span><span class="p">,</span> <span class="s1">&#39;Ruchette&#39;</span><span class="p">],</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Type :&#39;</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dic_race</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Hybride&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Noire&#39;</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">race</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span>
+<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Hybride&#39;</span><span class="p">,</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hybride&#39;</span><span class="p">,</span> <span class="s1">&#39;Noire&#39;</span><span class="p">],</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Race abeille :&#39;</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">type_r</span><span class="p">,</span> <span class="n">race</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">on_button_clicked1</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">output1</span><span class="p">:</span>
+            <span class="n">output1</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+            
+            <span class="k">return</span><span class="p">(</span><span class="n">dic_race</span><span class="p">[</span><span class="n">race</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> <span class="n">dic_type</span><span class="p">[</span><span class="n">type_r</span><span class="o">.</span><span class="n">value</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13352,29 +13929,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="k">def</span> <span class="nf">on_button_clicked1</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
-    <span class="k">with</span> <span class="n">output1</span><span class="p">:</span>
-        <span class="n">output1</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
-        
-        <span class="n">affiche</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="nbinteract-hide_in
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">button1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Affichage&quot;</span><span class="p">,</span> <span class="n">button_style</span><span class="o">=</span><span class="s1">&#39;success&#39;</span><span class="p">)</span> <span class="c1"># &#39;success&#39;, &#39;info&#39;, &#39;warning&#39;, &#39;danger&#39; or &#39;&#39;)</span>
+<span class="n">button1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Prédiction&quot;</span><span class="p">,</span> <span class="n">button_style</span><span class="o">=</span><span class="s1">&#39;success&#39;</span><span class="p">)</span> <span class="c1"># &#39;success&#39;, &#39;info&#39;, &#39;warning&#39;, &#39;danger&#39; or &#39;&#39;)</span>
 <span class="n">output1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
 <span class="n">display</span><span class="p">(</span><span class="n">button1</span><span class="p">,</span> <span class="n">output1</span><span class="p">)</span>
 

@@ -149,3 +149,14 @@ TermSocket.open: Opened 1
 TermSocket.open: 1
 TermSocket.open: Opened 1
 Websocket closed
+[W 11:49:42.271 NotebookApp] Culling 'idle' kernel 'python3' (38ea6834-f7b9-49bd-8539-5653d8966386) with 1 connections due to 636 seconds of inactivity.
+[I 11:49:42.272 NotebookApp] Kernel shutdown: 38ea6834-f7b9-49bd-8539-5653d8966386
+[W 11:49:42.911 NotebookApp] 410 DELETE /user/paulinelvne-modelisation_abeille-5xgwd0xe/api/sessions/e5fc08ee-80fe-4919-85be-0241b52bd4d9 (37.58.186.129): Kernel deleted before session
+[W 11:49:42.911 NotebookApp] Kernel deleted before session
+[W 11:49:42.912 NotebookApp] 410 DELETE /user/paulinelvne-modelisation_abeille-5xgwd0xe/api/sessions/e5fc08ee-80fe-4919-85be-0241b52bd4d9 (37.58.186.129) 2.430000ms referer=https://hub.gke2.mybinder.org/user/paulinelvne-modelisation_abeille-5xgwd0xe/notebooks/Modelisation_abeille.ipynb
+[W 11:58:42.200 NotebookApp] 404 DELETE /user/paulinelvne-modelisation_abeille-5xgwd0xe/api/sessions/e5fc08ee-80fe-4919-85be-0241b52bd4d9 (37.58.186.129): Session not found: session_id='e5fc08ee-80fe-4919-85be-0241b52bd4d9'
+[W 11:58:42.200 NotebookApp] Session not found: session_id='e5fc08ee-80fe-4919-85be-0241b52bd4d9'
+[W 11:58:42.201 NotebookApp] 404 DELETE /user/paulinelvne-modelisation_abeille-5xgwd0xe/api/sessions/e5fc08ee-80fe-4919-85be-0241b52bd4d9 (37.58.186.129) 1.880000ms referer=https://hub.gke2.mybinder.org/user/paulinelvne-modelisation_abeille-5xgwd0xe/notebooks/Modelisation_abeille.ipynb
+[I 11:58:42.357 NotebookApp] Kernel started: 5187af57-982a-4e8e-95e9-86ab6dd7970a, name: python3
+[I 12:00:18.795 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[I 12:02:34.006 NotebookApp] Saving file at /Modelisation_abeille.ipynb

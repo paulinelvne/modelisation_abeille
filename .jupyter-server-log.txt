@@ -160,3 +160,41 @@ Websocket closed
 [I 11:58:42.357 NotebookApp] Kernel started: 5187af57-982a-4e8e-95e9-86ab6dd7970a, name: python3
 [I 12:00:18.795 NotebookApp] Saving file at /Modelisation_abeille.ipynb
 [I 12:02:34.006 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[W 2021-07-08 14:24:39.532 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-07-08 14:24:39.532 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-07-08 14:24:39.532 LabApp] 'base_url' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-07-08 14:24:39.532 LabApp] 'token' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-07-08 14:24:39.532 LabApp] 'trust_xheaders' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-07-08 14:24:39.532 LabApp] 'allow_origin' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-07-08 14:24:39.532 LabApp] 'allow_origin_pat' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-07-08 14:24:39.532 LabApp] 'extra_template_paths' was found in both NotebookApp and ServerApp. This is likely a recent change. This config will only be set in NotebookApp. Please check if you should also config these traits in ServerApp for your purpose.
+[W 2021-07-08 14:24:39.532 LabApp] 'jinja_template_vars' was found in both NotebookApp and ServerApp. This is likely a recent change. This config will only be set in NotebookApp. Please check if you should also config these traits in ServerApp for your purpose.
+[W 2021-07-08 14:24:39.532 LabApp] 'shutdown_no_activity_timeout' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-07-08 14:24:39.532 LabApp] 'tornado_settings' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-07-08 14:24:39.532 LabApp] 'tornado_settings' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[I 2021-07-08 14:24:39.540 LabApp] JupyterLab extension loaded from /srv/conda/envs/notebook/lib/python3.7/site-packages/jupyterlab
+[I 2021-07-08 14:24:39.540 LabApp] JupyterLab application directory is /srv/conda/envs/notebook/share/jupyter/lab
+[I 14:24:39.559 NotebookApp] nteract extension loaded from /srv/conda/envs/notebook/lib/python3.7/site-packages/nteract_on_jupyter
+[I 14:24:39.562 NotebookApp] Will shut down after 600 seconds with no kernels or terminals.
+[I 14:24:39.563 NotebookApp] Serving notebooks from local directory: /home/jovyan
+[I 14:24:39.563 NotebookApp] Jupyter Notebook 6.2.0 is running at:
+[I 14:24:39.563 NotebookApp] http://jupyter-paulinelvne-2dmodelisation-5fabeille-2d3qr5yg3h:8888/user/paulinelvne-modelisation_abeille-3qr5yg3h/?token=...
+[I 14:24:39.563 NotebookApp]  or http://127.0.0.1:8888/user/paulinelvne-modelisation_abeille-3qr5yg3h/?token=...
+[I 14:24:39.563 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 14:24:39.568 NotebookApp] No web browser found: could not locate runnable browser.
+[I 14:24:41.544 NotebookApp] 302 GET /user/paulinelvne-modelisation_abeille-3qr5yg3h/ (10.0.5.98) 1.320000ms
+[I 14:24:45.160 NotebookApp] 302 GET /user/paulinelvne-modelisation_abeille-3qr5yg3h/?token=o0jz4-ARSN2MeIEzxbnoCw (37.58.186.129) 0.680000ms
+[W 14:28:11.175 NotebookApp] Notebook Modelisation_abeille.ipynb is not trusted
+[I 14:28:11.956 NotebookApp] Kernel started: 5505d5e2-67ef-47dc-a163-4c0919e15bf5, name: python3
+[I 14:28:11.957 NotebookApp] Culling kernels with idle durations > 600 seconds at 60 second intervals ...
+[I 14:28:11.957 NotebookApp] Culling kernels even with connected clients
+[I 14:30:12.346 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[I 14:32:12.161 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[I 14:34:12.165 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[I 14:36:12.157 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[I 14:38:09.346 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[I 14:38:45.173 NotebookApp] New terminal with automatic name: 1
+TermSocket.open: 1
+TermSocket.open: Opened 1
+[I 14:39:22.474 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[I 14:39:37.580 NotebookApp] Saving file at /Modelisation_abeille.ipynb

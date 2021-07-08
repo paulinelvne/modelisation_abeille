@@ -13128,7 +13128,7 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
 <span class="c1">#nbi:hide_out</span>
-<span class="o">!</span>pip3 install sklearn
+<span class="c1">#!pip3 install sklearn</span>
 
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">widgets</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
@@ -13140,28 +13140,6 @@ div#notebook {
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Requirement already satisfied: sklearn in /srv/conda/envs/notebook/lib/python3.7/site-packages (0.0)
-Requirement already satisfied: scikit-learn in /srv/conda/envs/notebook/lib/python3.7/site-packages (from sklearn) (0.24.2)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (2.1.0)
-Requirement already satisfied: scipy&gt;=0.19.1 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.7.0)
-Requirement already satisfied: joblib&gt;=0.11 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.0.1)
-Requirement already satisfied: numpy&gt;=1.13.3 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.21.0)
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13829,11 +13807,14 @@ Requirement already satisfied: numpy&gt;=1.13.3 in /srv/conda/envs/notebook/lib/
             <span class="n">dt</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
             <span class="n">y_predict</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
             
-            <span class="c1">#print(&quot;Les abeilles sont mortes il y a environ&quot;, dt.predict(pred)[0], &quot;jours avec une fiabilité de&quot;, accuracy_score(y_test,y_predict)*100, &quot;%&quot;)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Les abeilles sont mortes il y a environ&quot;</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pred</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;jours avec une fiabilité de&quot;</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_predict</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
 
                 
-            <span class="n">display</span><span class="p">(</span><span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s2">&quot;Les abeilles sont mortes il y a environ &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pred</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> 
-                                  <span class="s2">&quot; jours avec une fiabilité de &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_predict</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">))</span>
+            <span class="n">Label_res</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s2">&quot;Les abeilles sont mortes il y a environ &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pred</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> 
+                                  <span class="s2">&quot; jours avec une fiabilité de &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_predict</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+
+            <span class="n">display</span><span class="p">(</span><span class="n">Label_res</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+            <span class="n">display</span><span class="p">(</span><span class="n">Label_res</span><span class="p">)</span>
 </pre></div>
 
     </div>

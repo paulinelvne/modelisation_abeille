@@ -295,3 +295,14 @@ TermSocket.open: Opened 1
 [I 08:33:36.037 NotebookApp] Saving file at /Modelisation_abeille.ipynb
 [I 08:33:43.808 NotebookApp] Saving file at /Modelisation_abeille.ipynb
 [I 08:35:48.485 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[W 08:40:18.630 NotebookApp] Culling 'idle' kernel 'python3' (4f1bba2f-481c-4368-be2e-148376126fee) with 1 connections due to 653 seconds of inactivity.
+[I 08:40:18.632 NotebookApp] Kernel shutdown: 4f1bba2f-481c-4368-be2e-148376126fee
+[W 08:40:19.421 NotebookApp] 410 DELETE /binder/jupyter/user/paulinelvne-modelisation_abeille-lzsuq51h/api/sessions/f78e84de-fbc3-4f27-ac72-54c910fc2b6b (37.58.186.129): Kernel deleted before session
+[W 08:40:19.421 NotebookApp] Kernel deleted before session
+[W 08:40:19.422 NotebookApp] 410 DELETE /binder/jupyter/user/paulinelvne-modelisation_abeille-lzsuq51h/api/sessions/f78e84de-fbc3-4f27-ac72-54c910fc2b6b (37.58.186.129) 3.030000ms referer=https://notebooks.gesis.org/binder/jupyter/user/paulinelvne-modelisation_abeille-lzsuq51h/notebooks/Modelisation_abeille.ipynb
+[W 09:10:31.532 NotebookApp] 404 DELETE /binder/jupyter/user/paulinelvne-modelisation_abeille-lzsuq51h/api/sessions/f78e84de-fbc3-4f27-ac72-54c910fc2b6b (37.58.186.129): Session not found: session_id='f78e84de-fbc3-4f27-ac72-54c910fc2b6b'
+[W 09:10:31.533 NotebookApp] Session not found: session_id='f78e84de-fbc3-4f27-ac72-54c910fc2b6b'
+[W 09:10:31.535 NotebookApp] 404 DELETE /binder/jupyter/user/paulinelvne-modelisation_abeille-lzsuq51h/api/sessions/f78e84de-fbc3-4f27-ac72-54c910fc2b6b (37.58.186.129) 4.760000ms referer=https://notebooks.gesis.org/binder/jupyter/user/paulinelvne-modelisation_abeille-lzsuq51h/notebooks/Modelisation_abeille.ipynb
+[I 09:10:31.618 NotebookApp] Kernel started: e06f4a5d-da43-42c0-a8a1-4124584741d9, name: python3
+[W 09:10:49.704 NotebookApp] delete /Courbe_ML.png
+[I 09:12:13.947 NotebookApp] Uploading file to /Courbe_ML.png

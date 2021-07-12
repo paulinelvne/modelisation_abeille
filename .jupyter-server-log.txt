@@ -291,3 +291,6 @@ TermSocket.open: Opened 1
 TermSocket.open: 1
 TermSocket.open: Opened 1
 [I 08:28:19.521 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[I 08:30:19.520 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[I 08:33:36.037 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[I 08:33:43.808 NotebookApp] Saving file at /Modelisation_abeille.ipynb

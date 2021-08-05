@@ -1,52 +1,30 @@
-"num_jour";".groups";"pdsab_calc";".type"
-1;"Site Gilles - lot 1 - 300 Ab";123,068035770047;"predicted"
-3,34;"Site Gilles - lot 1 - 300 Ab";111,389461801138;"predicted"
-5,68;"Site Gilles - lot 1 - 300 Ab";100,867244410331;"predicted"
-8,02;"Site Gilles - lot 1 - 300 Ab";91,4276539396635;"predicted"
-10,36;"Site Gilles - lot 1 - 300 Ab";82,9992157812987;"predicted"
-12,7;"Site Gilles - lot 1 - 300 Ab";75,5127103775241;"predicted"
-15,04;"Site Gilles - lot 1 - 300 Ab";68,9011732207522;"predicted"
-17,38;"Site Gilles - lot 1 - 300 Ab";63,0998948535202;"predicted"
-19,72;"Site Gilles - lot 1 - 300 Ab";58,0464208684903;"predicted"
-22,06;"Site Gilles - lot 1 - 300 Ab";53,6805519084496;"predicted"
-24,4;"Site Gilles - lot 1 - 300 Ab";49,9443436663099;"predicted"
-26,74;"Site Gilles - lot 1 - 300 Ab";46,782106885108;"predicted"
-29,08;"Site Gilles - lot 1 - 300 Ab";44,1404073580055;"predicted"
-31,42;"Site Gilles - lot 1 - 300 Ab";41,9680659282888;"predicted"
-33,76;"Site Gilles - lot 1 - 300 Ab";40,2161584893692;"predicted"
-36,1;"Site Gilles - lot 1 - 300 Ab";38,8380159847829;"predicted"
-38,44;"Site Gilles - lot 1 - 300 Ab";37,7892244081908;"predicted"
-40,78;"Site Gilles - lot 1 - 300 Ab";37,027624803379;"predicted"
-43,12;"Site Gilles - lot 1 - 300 Ab";36,5133132642581;"predicted"
-45,46;"Site Gilles - lot 1 - 300 Ab";36,2086409348637;"predicted"
-47,8;"Site Gilles - lot 1 - 300 Ab";36,0782140093562;"predicted"
-50,14;"Site Gilles - lot 1 - 300 Ab";36,0888937320211;"predicted"
-52,48;"Site Gilles - lot 1 - 300 Ab";36,2097963972682;"predicted"
-54,82;"Site Gilles - lot 1 - 300 Ab";36,4122933496329;"predicted"
-57,16;"Site Gilles - lot 1 - 300 Ab";36,6700109837749;"predicted"
-59,5;"Site Gilles - lot 1 - 300 Ab";36,9588307444788;"predicted"
-61,84;"Site Gilles - lot 1 - 300 Ab";37,2568891266544;"predicted"
-64,18;"Site Gilles - lot 1 - 300 Ab";37,5445776753361;"predicted"
-66,52;"Site Gilles - lot 1 - 300 Ab";37,8045429856831;"predicted"
-68,86;"Site Gilles - lot 1 - 300 Ab";38,0216867029796;"predicted"
-71,2;"Site Gilles - lot 1 - 300 Ab";38,1831655226348;"predicted"
-73,54;"Site Gilles - lot 1 - 300 Ab";38,2783911901821;"predicted"
-75,88;"Site Gilles - lot 1 - 300 Ab";38,2990305012808;"predicted"
-78,22;"Site Gilles - lot 1 - 300 Ab";38,2390053017138;"predicted"
-80,56;"Site Gilles - lot 1 - 300 Ab";38,0944924873904;"predicted"
-82,9;"Site Gilles - lot 1 - 300 Ab";37,8639240043431;"predicted"
-85,24;"Site Gilles - lot 1 - 300 Ab";37,5479868487306;"predicted"
-87,58;"Site Gilles - lot 1 - 300 Ab";37,1496230668354;"predicted"
-89,92;"Site Gilles - lot 1 - 300 Ab";36,674029755066;"predicted"
-92,26;"Site Gilles - lot 1 - 300 Ab";36,1286590599545;"predicted"
-94,6;"Site Gilles - lot 1 - 300 Ab";35,5232181781589;"predicted"
-96,94;"Site Gilles - lot 1 - 300 Ab";34,8696693564614;"predicted"
-99,28;"Site Gilles - lot 1 - 300 Ab";34,1822298917696;"predicted"
-101,62;"Site Gilles - lot 1 - 300 Ab";33,4773721311152;"predicted"
-103,96;"Site Gilles - lot 1 - 300 Ab";32,7738234716553;"predicted"
-106,3;"Site Gilles - lot 1 - 300 Ab";32,0925663606721;"predicted"
-108,64;"Site Gilles - lot 1 - 300 Ab";31,456838295572;"predicted"
-110,98;"Site Gilles - lot 1 - 300 Ab";30,8921318238866;"predicted"
-113,32;"Site Gilles - lot 1 - 300 Ab";30,4261945432722;"predicted"
-115,66;"Site Gilles - lot 1 - 300 Ab";30,0890291015109;"predicted"
-118;"Site Gilles - lot 1 - 300 Ab";29,9128931965078;"predicted"
+"num_jour";"pdsab_calc"
+1;127,244280398127
+2;122,258427221515
+3;117,61306716449
+4;113,26223116879
+5;109,16398301665
+6;105,280419330803
+7;101,577669574482
+8;98,025896051417
+9;94,5992939058389
+10;91,2760911224756
+11;88,038548526554
+12;84,8729597837997
+13;81,7696514004369
+14;78,7229827231885
+15;75,7313459392759
+16;72,7971660764191
+17;69,926901002837
+18;67,1310414272469
+19;64,4241108988648
+20;61,8246658074052
+21;59,3552953830815
+22;57,0426216966056
+23;54,9172996591879
+24;53,0140170225376
+25;51,3714943788625
+26;50,0324851608689
+27;49,043775641762
+28;48,4561849352454
+29;48,3245649955213

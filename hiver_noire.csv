@@ -1,52 +1,30 @@
-"num_jour";".groups";"pdsab_calc";".type"
-1;"Site Roy - Lot Y - 300 Ab";138,658800576857;"predicted"
-3,34;"Site Roy - Lot Y - 300 Ab";129,037342524608;"predicted"
-5,68;"Site Roy - Lot Y - 300 Ab";120,345896070022;"predicted"
-8,02;"Site Roy - Lot Y - 300 Ab";112,524164557836;"predicted"
-10,36;"Site Roy - Lot Y - 300 Ab";105,513791284935;"predicted"
-12,7;"Site Roy - Lot Y - 300 Ab";99,2583595003522;"predicted"
-15,04;"Site Roy - Lot Y - 300 Ab";93,7033924052719;"predicted"
-17,38;"Site Roy - Lot Y - 300 Ab";88,7963531530255;"predicted"
-19,72;"Site Roy - Lot Y - 300 Ab";84,4866448490941;"predicted"
-22,06;"Site Roy - Lot Y - 300 Ab";80,7256105511075;"predicted"
-24,4;"Site Roy - Lot Y - 300 Ab";77,4665332688449;"predicted"
-26,74;"Site Roy - Lot Y - 300 Ab";74,6646359642341;"predicted"
-29,08;"Site Roy - Lot Y - 300 Ab";72,2770815513521;"predicted"
-31,42;"Site Roy - Lot Y - 300 Ab";70,2629728964248;"predicted"
-33,76;"Site Roy - Lot Y - 300 Ab";68,5833528178272;"predicted"
-36,1;"Site Roy - Lot Y - 300 Ab";67,201204086083;"predicted"
-38,44;"Site Roy - Lot Y - 300 Ab";66,0814494238652;"predicted"
-40,78;"Site Roy - Lot Y - 300 Ab";65,1909515059956;"predicted"
-43,12;"Site Roy - Lot Y - 300 Ab";64,4985129594451;"predicted"
-45,46;"Site Roy - Lot Y - 300 Ab";63,9748763633335;"predicted"
-47,8;"Site Roy - Lot Y - 300 Ab";63,5927242489295;"predicted"
-50,14;"Site Roy - Lot Y - 300 Ab";63,3266790996511;"predicted"
-52,48;"Site Roy - Lot Y - 300 Ab";63,1533033510649;"predicted"
-54,82;"Site Roy - Lot Y - 300 Ab";63,0510993908868;"predicted"
-57,16;"Site Roy - Lot Y - 300 Ab";63,0005095589814;"predicted"
-59,5;"Site Roy - Lot Y - 300 Ab";62,9839161473625;"predicted"
-61,84;"Site Roy - Lot Y - 300 Ab";62,9856414001929;"predicted"
-64,18;"Site Roy - Lot Y - 300 Ab";62,9919475137841;"predicted"
-66,52;"Site Roy - Lot Y - 300 Ab";62,991036636597;"predicted"
-68,86;"Site Roy - Lot Y - 300 Ab";62,973050869241;"predicted"
-71,2;"Site Roy - Lot Y - 300 Ab";62,9300722644752;"predicted"
-73,54;"Site Roy - Lot Y - 300 Ab";62,8561228272066;"predicted"
-75,88;"Site Roy - Lot Y - 300 Ab";62,7471645144924;"predicted"
-78,22;"Site Roy - Lot Y - 300 Ab";62,6010992355376;"predicted"
-80,56;"Site Roy - Lot Y - 300 Ab";62,4177688516975;"predicted"
-82,9;"Site Roy - Lot Y - 300 Ab";62,1989551764751;"predicted"
-85,24;"Site Roy - Lot Y - 300 Ab";61,9483799755233;"predicted"
-87,58;"Site Roy - Lot Y - 300 Ab";61,6717049666433;"predicted"
-89,92;"Site Roy - Lot Y - 300 Ab";61,376531819786;"predicted"
-92,26;"Site Roy - Lot Y - 300 Ab";61,0724021570505;"predicted"
-94,6;"Site Roy - Lot Y - 300 Ab";60,7707975526858;"predicted"
-96,94;"Site Roy - Lot Y - 300 Ab";60,4851395330889;"predicted"
-99,28;"Site Roy - Lot Y - 300 Ab";60,2307895768066;"predicted"
-101,62;"Site Roy - Lot Y - 300 Ab";60,0250491145339;"predicted"
-103,96;"Site Roy - Lot Y - 300 Ab";59,8871595291156;"predicted"
-106,3;"Site Roy - Lot Y - 300 Ab";59,8383021555451;"predicted"
-108,64;"Site Roy - Lot Y - 300 Ab";59,9015982809646;"predicted"
-110,98;"Site Roy - Lot Y - 300 Ab";60,1021091446655;"predicted"
-113,32;"Site Roy - Lot Y - 300 Ab";60,4668359380882;"predicted"
-115,66;"Site Roy - Lot Y - 300 Ab";61,0247198048224;"predicted"
-118;"Site Roy - Lot Y - 300 Ab";61,8066418406059;"predicted"
+"num_jour";"pdsab_calc"
+1;122,725372728772
+2;120,228416180616
+3;117,504582848415
+4;114,591907455073
+5;111,526880623526
+6;108,344448876741
+7;105,078014637712
+8;101,759436229467
+9;98,419027875062
+10;95,0855596975846
+11;91,7862577201519
+12;88,5468038659115
+13;85,3913359580415
+14;82,34244771975
+15;79,4211887742756
+16;76,6470646448872
+17;74,0380367548839
+18;71,6105224275951
+19;69,3793948863806
+20;67,3579832546305
+21;65,558072555765
+22;63,9899037132349
+23;62,6621735505211
+24;61,5820347911348
+25;60,7550960586175
+26;60,1854218765412
+27;59,875532668508
+28;59,8264047581502
+29;60,0374703691307

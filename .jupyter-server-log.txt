@@ -363,3 +363,17 @@ TermSocket.open: Opened 1
 [I 08:21:30.681 NotebookApp] Saving file at /Prediction_ML.ipynb
 [I 08:21:33.374 NotebookApp] Starting buffering for 2eceb7ce-0c8a-4ef5-8019-c86b75082d98:3a08a79459514db38e80443bdd7d79b3
 [I 08:21:37.442 NotebookApp] Kernel shutdown: 2eceb7ce-0c8a-4ef5-8019-c86b75082d98
+[I 08:57:36.563 NotebookApp] Copying Prediction_ML.ipynb to 
+[I 08:58:12.885 NotebookApp] Creating new directory in /MNL
+[I 08:58:15.084 NotebookApp] Creating new directory in /MNL
+[I 08:58:54.755 NotebookApp] Uploading file to /MNL/Courbe/hiver_hybride_MNL.png
+[I 08:58:56.103 NotebookApp] Uploading file to /MNL/Courbe/hiver_noire_MNL.png
+[I 08:58:57.617 NotebookApp] Uploading file to /MNL/Courbe/printemps_hybride_MNL.png
+[I 08:58:58.595 NotebookApp] Uploading file to /MNL/Courbe/printemps_noire_MNL.png
+[I 08:59:27.483 NotebookApp] Uploading file to /MNL/Donnee/hiver_hybride_MNL.csv
+[I 08:59:28.823 NotebookApp] Uploading file to /MNL/Donnee/hiver_noire_MNL.csv
+[I 08:59:29.821 NotebookApp] Uploading file to /MNL/Donnee/printemps_hybride_MNL.csv
+[I 08:59:30.817 NotebookApp] Uploading file to /MNL/Donnee/printemps_noire_MNL.csv
+[I 08:59:41.180 NotebookApp] Kernel started: 1fad6f9f-3974-4f8c-b101-15f3792908c4, name: python3
+[I 09:01:41.338 NotebookApp] Saving file at /Prediction_MNL.ipynb
+[I 09:01:52.596 NotebookApp] Saving file at /Prediction_MNL.ipynb

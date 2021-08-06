@@ -306,3 +306,60 @@ TermSocket.open: Opened 1
 [I 09:10:31.618 NotebookApp] Kernel started: e06f4a5d-da43-42c0-a8a1-4124584741d9, name: python3
 [W 09:10:49.704 NotebookApp] delete /Courbe_ML.png
 [I 09:12:13.947 NotebookApp] Uploading file to /Courbe_ML.png
+[W 2021-08-06 08:04:42.288 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-06 08:04:42.289 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-06 08:04:42.289 LabApp] 'base_url' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-06 08:04:42.289 LabApp] 'token' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-06 08:04:42.289 LabApp] 'trust_xheaders' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-06 08:04:42.289 LabApp] 'allow_origin' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-06 08:04:42.289 LabApp] 'allow_origin_pat' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-06 08:04:42.289 LabApp] 'extra_template_paths' was found in both NotebookApp and ServerApp. This is likely a recent change. This config will only be set in NotebookApp. Please check if you should also config these traits in ServerApp for your purpose.
+[W 2021-08-06 08:04:42.289 LabApp] 'jinja_template_vars' was found in both NotebookApp and ServerApp. This is likely a recent change. This config will only be set in NotebookApp. Please check if you should also config these traits in ServerApp for your purpose.
+[W 2021-08-06 08:04:42.290 LabApp] 'shutdown_no_activity_timeout' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-06 08:04:42.290 LabApp] 'tornado_settings' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-06 08:04:42.290 LabApp] 'tornado_settings' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[I 2021-08-06 08:04:42.297 LabApp] JupyterLab extension loaded from /srv/conda/envs/notebook/lib/python3.7/site-packages/jupyterlab
+[I 2021-08-06 08:04:42.297 LabApp] JupyterLab application directory is /srv/conda/envs/notebook/share/jupyter/lab
+[I 08:04:42.310 NotebookApp] nteract extension loaded from /srv/conda/envs/notebook/lib/python3.7/site-packages/nteract_on_jupyter
+[I 08:04:42.312 NotebookApp] Will shut down after 600 seconds with no kernels or terminals.
+[I 08:04:42.313 NotebookApp] Serving notebooks from local directory: /home/jovyan
+[I 08:04:42.313 NotebookApp] Jupyter Notebook 6.2.0 is running at:
+[I 08:04:42.314 NotebookApp] http://jupyter-paulinelvne-2dmodelisation-5fabeille-2dqj80febj:8888/user/paulinelvne-modelisation_abeille-qj80febj/?token=...
+[I 08:04:42.314 NotebookApp]  or http://127.0.0.1:8888/user/paulinelvne-modelisation_abeille-qj80febj/?token=...
+[I 08:04:42.314 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 08:04:42.320 NotebookApp] No web browser found: could not locate runnable browser.
+[I 08:04:45.427 NotebookApp] 302 GET /user/paulinelvne-modelisation_abeille-qj80febj/ (10.0.14.16) 0.920000ms
+[I 08:04:49.781 NotebookApp] 302 GET /user/paulinelvne-modelisation_abeille-qj80febj/?token=aPuqlBKwQwGyJjLxwxuvGw (37.58.186.129) 1.020000ms
+[I 08:05:14.365 NotebookApp] Creating new directory in 
+[I 08:05:42.677 NotebookApp] Creating new directory in 
+[W 08:07:25.253 NotebookApp] 404 PATCH /user/paulinelvne-modelisation_abeille-qj80febj/api/contents/ML/Courbe_ML.png (37.58.186.129): ../Courbe_ML.png is outside root contents directory
+[W 08:07:25.253 NotebookApp] ../Courbe_ML.png is outside root contents directory
+[W 08:07:25.254 NotebookApp] 404 PATCH /user/paulinelvne-modelisation_abeille-qj80febj/api/contents/ML/Courbe_ML.png (37.58.186.129) 2.340000ms referer=https://hub.gke2.mybinder.org/user/paulinelvne-modelisation_abeille-qj80febj/tree/ML
+[I 08:08:02.841 NotebookApp] Creating new directory in /ML
+[I 08:08:13.623 NotebookApp] Creating new directory in /ML
+[W 08:08:54.329 NotebookApp] Notebook ML/Prediction_ML.ipynb is not trusted
+[I 08:08:55.016 NotebookApp] Kernel started: 94c1e69b-0f80-450b-a5c2-7d4b30f0c144, name: python3
+[I 08:08:55.016 NotebookApp] Culling kernels with idle durations > 600 seconds at 60 second intervals ...
+[I 08:08:55.016 NotebookApp] Culling kernels even with connected clients
+[I 08:10:55.870 NotebookApp] Saving file at /ML/Prediction_ML.ipynb
+[I 08:11:13.249 NotebookApp] Saving file at /ML/Donnee/hiver_hybride_ML.csv
+[I 08:11:14.652 NotebookApp] Saving file at /ML/Donnee/hiver_noire_ML.csv
+[I 08:11:15.894 NotebookApp] Saving file at /ML/Donnee/printemps_hybride_ML.csv
+[I 08:11:17.343 NotebookApp] Saving file at /ML/Donnee/printemps_noire_ML.csv
+[I 08:12:12.244 NotebookApp] Saving file at /ML/Courbe/printemps_hybride_ML.png
+[I 08:12:14.624 NotebookApp] Saving file at /ML/Courbe/printemps_noire_ML.png
+[I 08:12:27.140 NotebookApp] Saving file at /ML/Courbe/hiver_hybride_ML.png
+[I 08:12:28.626 NotebookApp] Saving file at /ML/Courbe/hiver_noire_ML.png
+[I 08:12:33.483 NotebookApp] Starting buffering for 94c1e69b-0f80-450b-a5c2-7d4b30f0c144:0332a5c84c894ca487e8a966a33110ee
+[I 08:14:34.074 NotebookApp] Saving file at /ML/Prediction_ML.ipynb
+[I 08:16:34.087 NotebookApp] Saving file at /ML/Prediction_ML.ipynb
+[I 08:17:33.795 NotebookApp] New terminal with automatic name: 1
+TermSocket.open: 1
+TermSocket.open: Opened 1
+[I 08:18:12.713 NotebookApp] Saving file at /ML/Prediction_ML.ipynb
+[I 08:19:44.655 NotebookApp] Starting buffering for 94c1e69b-0f80-450b-a5c2-7d4b30f0c144:d450e76df41c4d7fb07567e1dd3f1192
+[I 08:20:21.222 NotebookApp] Kernel shutdown: 94c1e69b-0f80-450b-a5c2-7d4b30f0c144
+[I 08:20:48.772 NotebookApp] Kernel started: 2eceb7ce-0c8a-4ef5-8019-c86b75082d98, name: python3
+[I 08:21:30.681 NotebookApp] Saving file at /Prediction_ML.ipynb
+[I 08:21:33.374 NotebookApp] Starting buffering for 2eceb7ce-0c8a-4ef5-8019-c86b75082d98:3a08a79459514db38e80443bdd7d79b3
+[I 08:21:37.442 NotebookApp] Kernel shutdown: 2eceb7ce-0c8a-4ef5-8019-c86b75082d98

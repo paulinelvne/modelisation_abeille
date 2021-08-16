@@ -458,3 +458,7 @@ TermSocket.open: Opened 1
 [I 13:28:11.532 NotebookApp] Kernel shutdown: c2387ce3-cd38-4a17-ad48-4128e5630f0e
 [I 13:32:50.686 NotebookApp] Starting buffering for 930fdf30-76b0-4cd2-a587-675cffa456ea:e72104e46747482188f897dd91efd64a
 [I 13:33:23.649 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[W 13:34:14.524 NotebookApp] Notebook Prediction_ML.ipynb is not trusted
+[I 13:34:15.122 NotebookApp] Kernel started: dbe2e80b-cff0-45b3-a5aa-a2cf5e32d5b3, name: python3
+[I 13:34:57.922 NotebookApp] Saving file at /Modelisation_abeille.ipynb
+[I 13:35:03.376 NotebookApp] Starting buffering for dbe2e80b-cff0-45b3-a5aa-a2cf5e32d5b3:1b99c26a61ff4dd08d8dc4196596044c

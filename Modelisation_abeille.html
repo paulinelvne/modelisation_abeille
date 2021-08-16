@@ -13129,7 +13129,7 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
 <span class="c1">#nbi:hide_out</span>
 <span class="o">!</span>pip3 install sklearn
-<span class="c1">#!pip3 install matplotlib </span>
+<span class="o">!</span>pip3 install matplotlib 
 
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">widgets</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Image</span>
@@ -13139,6 +13139,62 @@ div#notebook {
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
 <span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">img</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Requirement already satisfied: sklearn in /srv/conda/envs/notebook/lib/python3.7/site-packages (0.0)
+Requirement already satisfied: scikit-learn in /srv/conda/envs/notebook/lib/python3.7/site-packages (from sklearn) (0.24.2)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (2.2.0)
+Requirement already satisfied: scipy&gt;=0.19.1 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.7.1)
+Requirement already satisfied: joblib&gt;=0.11 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.0.1)
+Requirement already satisfied: numpy&gt;=1.13.3 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.21.2)
+Collecting matplotlib
+  Downloading matplotlib-3.4.3-cp37-cp37m-manylinux1_x86_64.whl (10.3 MB)
+     |████████████████████████████████| 10.3 MB 4.5 MB/s eta 0:00:01
+Requirement already satisfied: python-dateutil&gt;=2.7 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from matplotlib) (2.8.1)
+Collecting cycler&gt;=0.10
+  Using cached cycler-0.10.0-py2.py3-none-any.whl (6.5 kB)
+Collecting pillow&gt;=6.2.0
+  Using cached Pillow-8.3.1-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (3.0 MB)
+Collecting kiwisolver&gt;=1.0.1
+  Using cached kiwisolver-1.3.1-cp37-cp37m-manylinux1_x86_64.whl (1.1 MB)
+Requirement already satisfied: numpy&gt;=1.16 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from matplotlib) (1.21.2)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from matplotlib) (2.4.7)
+Requirement already satisfied: six in /srv/conda/envs/notebook/lib/python3.7/site-packages (from cycler&gt;=0.10-&gt;matplotlib) (1.15.0)
+Installing collected packages: pillow, kiwisolver, cycler, matplotlib
+Successfully installed cycler-0.10.0 kiwisolver-1.3.1 matplotlib-3.4.3 pillow-8.3.1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="nbinteract-hide_in
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
+<span class="n">Label_ab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Poids 300 abeilles en g&#39;</span><span class="p">)</span>
+<span class="n">pds_ab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13156,10 +13212,13 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">Label_ab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Poids 300 abeilles en g&#39;</span><span class="p">)</span>
-<span class="n">pds_ab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le poids moyen d&#39;une abeilles est de &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; mg&quot;</span><span class="p">)</span>
 
-<span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_ab</span><span class="p">,</span><span class="n">pds_ab</span><span class="p">])</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">interactive_output</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="n">pds_ab</span><span class="p">})</span>
+
+<span class="n">p_ab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">pds_ab</span><span class="p">,</span> <span class="n">out</span><span class="p">])</span>
+<span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_ab</span><span class="p">,</span> <span class="n">p_ab</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13201,45 +13260,10 @@ div#notebook {
 <span class="n">Label_prec</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Précipitation en mm&#39;</span><span class="p">)</span>
 <span class="n">prec</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
 
-<span class="n">Label_prec1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Précipitation en mm à J-1&#39;</span><span class="p">)</span>
-<span class="n">prec1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
-
-<span class="n">Label_prec2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Précipitation en mm à J-2&#39;</span><span class="p">)</span>
-<span class="n">prec2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
-
-<span class="n">Label_prec3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Précipitation en mm à J-3&#39;</span><span class="p">)</span>
-<span class="n">prec3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
-
-<span class="n">vbox1prec</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_prec</span><span class="p">,</span><span class="n">prec</span><span class="p">,</span> <span class="n">Label_prec1</span><span class="p">,</span><span class="n">prec1</span><span class="p">])</span>
-<span class="c1">#vbox2 = widgets.VBox([Label_prec1,prec1])</span>
-<span class="n">vbox3prec</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_prec2</span><span class="p">,</span><span class="n">prec2</span><span class="p">,</span> <span class="n">Label_prec3</span><span class="p">,</span><span class="n">prec3</span><span class="p">])</span>
-<span class="c1">#vbox4 = widgets.VBox([Label_prec3,prec3])</span>
-
-<span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">vbox1prec</span><span class="p">,</span> <span class="n">vbox3prec</span><span class="p">])</span><span class="c1">#, vbox3, vbox4])</span>
+<span class="n">vbox1prec</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_prec</span><span class="p">,</span><span class="n">prec</span><span class="p">])</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    
-
-
-
-  <div class="output_subarea output_widget_view ">
-    <button class="js-nbinteract-widget">
-      Loading widgets...
-    </button>
-  </div>
-
-</div>
-
 </div>
 </div>
 
@@ -13257,45 +13281,10 @@ div#notebook {
 <span class="n">Label_hum</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Humidité en %&#39;</span><span class="p">)</span>
 <span class="n">hum</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
 
-<span class="n">Label_hum1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Humidité en % à J-1&#39;</span><span class="p">)</span>
-<span class="n">hum1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
-
-<span class="n">Label_hum2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Humidité en % à J-2&#39;</span><span class="p">)</span>
-<span class="n">hum2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
-
-<span class="n">Label_hum3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Humidité en % à J-3&#39;</span><span class="p">)</span>
-<span class="n">hum3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
-
-<span class="n">vbox1hum</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_hum</span><span class="p">,</span> <span class="n">hum</span><span class="p">,</span> <span class="n">Label_hum1</span><span class="p">,</span> <span class="n">hum1</span><span class="p">])</span>
-<span class="c1">#vbox2 = widgets.VBox([Label_prec1,prec1])</span>
-<span class="n">vbox3hum</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_hum2</span><span class="p">,</span> <span class="n">hum2</span><span class="p">,</span> <span class="n">Label_hum3</span><span class="p">,</span> <span class="n">hum3</span><span class="p">])</span>
-<span class="c1">#vbox4 = widgets.VBox([Label_prec3,prec3])</span>
-
-<span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">vbox1hum</span><span class="p">,</span> <span class="n">vbox3hum</span><span class="p">])</span><span class="c1">#, vbox3, vbox4])</span>
+<span class="n">vbox1hum</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_hum</span><span class="p">,</span> <span class="n">hum</span><span class="p">])</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    
-
-
-
-  <div class="output_subarea output_widget_view ">
-    <button class="js-nbinteract-widget">
-      Loading widgets...
-    </button>
-  </div>
-
-</div>
-
 </div>
 </div>
 
@@ -13313,21 +13302,24 @@ div#notebook {
 <span class="n">Label_temp</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Température moyenne en °C&#39;</span><span class="p">)</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
 
-<span class="n">Label_temp1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Température moyenne en °C à J-1&#39;</span><span class="p">)</span>
-<span class="n">temp1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+<span class="n">vbox1temp</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_temp</span><span class="p">,</span> <span class="n">temp</span><span class="p">])</span>
+</pre></div>
 
-<span class="n">Label_temp2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Température moyenne en °C à J-2&#39;</span><span class="p">)</span>
-<span class="n">temp2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+    </div>
+</div>
+</div>
 
-<span class="n">Label_temp3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Température moyenne en °C à J-3&#39;</span><span class="p">)</span>
-<span class="n">temp3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
+  </div>
 
-<span class="n">vbox1temp</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_temp</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="n">Label_temp1</span><span class="p">,</span> <span class="n">temp1</span><span class="p">])</span>
-<span class="c1">#vbox2 = widgets.VBox([Label_prec1,prec1])</span>
-<span class="n">vbox3temp</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label_temp2</span><span class="p">,</span> <span class="n">temp2</span><span class="p">,</span> <span class="n">Label_temp3</span><span class="p">,</span> <span class="n">temp3</span><span class="p">])</span>
-<span class="c1">#vbox4 = widgets.VBox([Label_prec3,prec3])</span>
+  
 
-<span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">vbox1temp</span><span class="p">,</span> <span class="n">vbox3temp</span><span class="p">])</span><span class="c1">#, vbox3, vbox4])</span>
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">vbox1prec</span><span class="p">,</span> <span class="n">vbox1hum</span><span class="p">,</span> <span class="n">vbox1temp</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13367,8 +13359,8 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
 <span class="n">saison</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span>
-<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Printemps&#39;</span><span class="p">,</span>
-<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Printemps&#39;</span><span class="p">,</span> <span class="s1">&#39;Hiver (trouvée après le 01/09)&#39;</span><span class="p">],</span>
+<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;printemps&#39;</span><span class="p">,</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;printemps&#39;</span><span class="p">,</span> <span class="s1">&#39;hiver&#39;</span><span class="p">],</span>
 <span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Saison:&#39;</span>
 <span class="p">)</span>
 </pre></div>
@@ -13388,99 +13380,31 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">expo_lum</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span>
-<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;soleil&#39;</span><span class="p">,</span>
-<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;soleil&quot;</span><span class="p">,</span> <span class="s2">&quot;mi_soleil (soleil à partir de 13h-14h)&quot;</span><span class="p">,</span> <span class="s2">&quot;ombre&quot;</span><span class="p">],</span>
-<span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Exposition à la lumière :&#39;</span>
-<span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="nbinteract-hide_in
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">orientation</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span>
-<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Est&#39;</span><span class="p">,</span>
-<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Est&quot;</span><span class="p">,</span>  <span class="s2">&quot;Ouest&quot;</span><span class="p">,</span>  <span class="s2">&quot;Sud&quot;</span><span class="p">,</span>  <span class="s2">&quot;Sud-Est&quot;</span><span class="p">],</span>
-<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Orientation de l&#39;entrée de la ruche:&quot;</span>
-<span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="nbinteract-hide_in
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">vbox_ruche1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">saison</span><span class="p">,</span><span class="n">expo_lum</span><span class="p">])</span>
-<span class="n">vbox_ruche2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">orientation</span><span class="p">])</span>
-
-<span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">vbox_ruche1</span><span class="p">,</span> <span class="n">vbox_ruche2</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    
-
-
-
-  <div class="output_subarea output_widget_view ">
-    <button class="js-nbinteract-widget">
-      Loading widgets...
-    </button>
-  </div>
-
-</div>
-
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="nbinteract-hide_in
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
 <span class="n">race</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span>
-<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Hybride&#39;</span><span class="p">,</span>
-<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hybride&#39;</span><span class="p">,</span> <span class="s1">&#39;Noire&#39;</span><span class="p">],</span>
+<span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;hybride&#39;</span><span class="p">,</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hybride&#39;</span><span class="p">,</span> <span class="s1">&#39;noire&#39;</span><span class="p">],</span>
 <span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Race abeille :&#39;</span>
 <span class="p">)</span>
+</pre></div>
 
-<span class="n">race</span>
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="nbinteract-hide_in
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
+<span class="n">Label</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s2">&quot;Les abeilles d&#39;hiver sont les abeilles retrouvées après le 01/09&quot;</span><span class="p">)</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">race</span><span class="p">,</span> <span class="n">saison</span><span class="p">])</span>
+<span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">Label</span><span class="p">,</span> <span class="n">h</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13505,6 +13429,78 @@ div#notebook {
 
 </div>
 
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pred_num_jour</span><span class="p">(</span><span class="n">pds</span><span class="p">,</span> <span class="n">race</span><span class="p">,</span> <span class="n">saison</span><span class="p">,</span> <span class="n">precipitation</span><span class="p">,</span> <span class="n">humidite</span><span class="p">,</span> <span class="n">temperature</span><span class="p">):</span>
+    <span class="n">dic_race</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;hybride&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;noire&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+    <span class="n">dic_saison</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;printemps&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hiver&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+            
+            
+    <span class="n">name_column</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;pdsab_calc&quot;</span><span class="p">,</span> <span class="s2">&quot;saison_exp&quot;</span><span class="p">,</span> <span class="s2">&quot;race&quot;</span><span class="p">,</span> <span class="s2">&quot;precipitation&quot;</span><span class="p">,</span> <span class="s2">&quot;humidite&quot;</span><span class="p">,</span> <span class="s2">&quot;moy_temp&quot;</span><span class="p">]</span>
+            
+    <span class="n">list_pred</span> <span class="o">=</span> <span class="p">[[</span><span class="n">pds</span><span class="p">,</span> <span class="n">dic_saison</span><span class="p">[</span><span class="n">saison</span><span class="p">],</span> <span class="n">dic_race</span><span class="p">[</span><span class="n">race</span><span class="p">],</span> <span class="n">precipitation</span><span class="p">,</span> <span class="n">humidite</span><span class="p">,</span> <span class="n">temperature</span><span class="p">]]</span>
+            
+            
+    <span class="n">pred</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">list_pred</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">name_column</span><span class="p">)</span>
+            
+            
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;info_tot_ab_3.csv&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">decimal</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;semaine1&quot;</span><span class="p">,</span> <span class="s2">&quot;semaine2&quot;</span><span class="p">,</span> <span class="s2">&quot;semaine3&quot;</span><span class="p">,</span> <span class="s2">&quot;semaine4&quot;</span><span class="p">]</span>
+    <span class="n">filtered_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">semaine</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">values</span><span class="p">)]</span>
+                        
+    <span class="n">y</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="p">[</span><span class="s2">&quot;jour&quot;</span><span class="p">]</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">col_sup</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;num_jour&quot;</span><span class="p">,</span> <span class="s2">&quot;semaine&quot;</span><span class="p">,</span> <span class="s2">&quot;site_lot_nbab&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;nbab&quot;</span> <span class="p">,</span><span class="s2">&quot;cadre&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_mort&quot;</span><span class="p">,</span> <span class="s2">&quot;origine&quot;</span><span class="p">,</span> <span class="s2">&quot;lot&quot;</span><span class="p">,</span> 
+           <span class="s2">&quot;site&quot;</span><span class="p">,</span> <span class="s2">&quot;Departement&quot;</span><span class="p">,</span> <span class="s2">&quot;Region&quot;</span><span class="p">,</span> <span class="s2">&quot;meteo_km&quot;</span><span class="p">,</span> <span class="s2">&quot;alt_site_m&quot;</span><span class="p">,</span> <span class="s2">&quot;alt_meteo_m&quot;</span><span class="p">,</span> <span class="s2">&quot;somme_precipitation_3&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;somme_precipitation_7&quot;</span><span class="p">,</span> <span class="s2">&quot;temp_12h&quot;</span><span class="p">,</span> <span class="s2">&quot;expo_vent&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;orientation&quot;</span><span class="p">,</span> <span class="s2">&quot;humidite_J1&quot;</span><span class="p">,</span> <span class="s2">&quot;humidite_J2&quot;</span><span class="p">,</span> 
+           <span class="s2">&quot;humidite_J3&quot;</span><span class="p">,</span> <span class="s2">&quot;moy_temp_J1&quot;</span><span class="p">,</span> <span class="s2">&quot;moy_temp_J2&quot;</span><span class="p">,</span> <span class="s2">&quot;moy_temp_J3&quot;</span><span class="p">,</span> <span class="s2">&quot;precipitation_J1&quot;</span><span class="p">,</span> <span class="s2">&quot;precipitation_J2&quot;</span><span class="p">,</span> 
+           <span class="s2">&quot;precipitation_J3&quot;</span><span class="p">,</span> <span class="s2">&quot;jour&quot;</span><span class="p">,</span> <span class="s1">&#39;expo_lum&#39;</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">col_sup</span> <span class="p">:</span>
+        <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="n">e</span><span class="p">]</span>
+            
+    <span class="n">col_categorie</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;saison_exp&quot;</span><span class="p">,</span> <span class="s2">&quot;race&quot;</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">col_categorie</span> <span class="p">:</span>
+        <span class="n">X</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">e</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
+            
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">dfo</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;gini&quot;</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">dfo</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">y_predict2</span> <span class="o">=</span> <span class="n">dfo</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">acc</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_predict2</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span> 
+        <span class="n">Xs_train</span><span class="p">,</span> <span class="n">Xs_test</span><span class="p">,</span> <span class="n">ys_train</span><span class="p">,</span> <span class="n">ys_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">dfs</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;gini&quot;</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">dfs</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xs_train</span><span class="p">,</span> <span class="n">ys_train</span><span class="p">)</span>
+        <span class="n">ys_predict2</span> <span class="o">=</span> <span class="n">dfs</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Xs_test</span><span class="p">)</span>
+        <span class="n">accs</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">ys_test</span><span class="p">,</span><span class="n">ys_predict2</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">accs</span> <span class="o">&gt;</span> <span class="n">acc</span> <span class="p">:</span> 
+        <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">Xs_train</span><span class="p">,</span> <span class="n">Xs_test</span><span class="p">,</span> <span class="n">ys_train</span><span class="p">,</span> <span class="n">ys_test</span>
+        <span class="n">dfo</span> <span class="o">=</span> <span class="n">dfs</span>
+        <span class="n">y_predict2</span> <span class="o">=</span> <span class="n">ys_predict2</span>
+        <span class="n">acc</span> <span class="o">=</span> <span class="n">accs</span>
+     
+    <span class="k">return</span><span class="p">(</span><span class="s2">&quot;Les abeilles sont mortes il y a environ &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">dfo</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pred</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; jours avec une fiabilité de &quot;</span> <span class="o">+</span> 
+                  <span class="nb">str</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_predict2</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot; %&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -13522,73 +13518,12 @@ div#notebook {
 <span class="k">def</span> <span class="nf">on_button_clicked1</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
         <span class="k">with</span> <span class="n">output1</span><span class="p">:</span>
             <span class="n">output1</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
-            
-            <span class="n">dic_race</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Hybride&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Noire&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
-            <span class="n">dic_orientation</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Est&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="s2">&quot;Ouest&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="s2">&quot;Sud&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="s2">&quot;Sud-Est&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
-            <span class="n">dic_expo_lum</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;soleil&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;mi_soleil (soleil à partir de 15h)&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;ombre&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
-            <span class="n">dic_saison</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Printemps&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Hiver (trouvée après le 01/09)&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
-            
-            
-            <span class="n">name_column</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;pdsab_calc&quot;</span><span class="p">,</span> <span class="s2">&quot;saison_exp&quot;</span><span class="p">,</span> <span class="s2">&quot;expo_lum&quot;</span><span class="p">,</span> <span class="s2">&quot;orientation&quot;</span><span class="p">,</span> <span class="s2">&quot;race&quot;</span><span class="p">,</span> <span class="s2">&quot;precipitation&quot;</span><span class="p">,</span> 
-                           <span class="s2">&quot;humidite&quot;</span><span class="p">,</span> <span class="s2">&quot;moy_temp&quot;</span><span class="p">,</span> <span class="s2">&quot;precipitation_J1&quot;</span><span class="p">,</span> <span class="s2">&quot;precipitation_J2&quot;</span><span class="p">,</span> <span class="s2">&quot;precipitation_J3&quot;</span><span class="p">,</span> <span class="s2">&quot;humidite_J1&quot;</span><span class="p">,</span> 
-                           <span class="s2">&quot;humidite_J2&quot;</span><span class="p">,</span> <span class="s2">&quot;humidite_J3&quot;</span><span class="p">,</span> <span class="s2">&quot;moy_temp_J1&quot;</span><span class="p">,</span> <span class="s2">&quot;moy_temp_J2&quot;</span><span class="p">,</span> <span class="s2">&quot;moy_temp_J3&quot;</span><span class="p">]</span>
-            
-            <span class="n">list_pred</span> <span class="o">=</span> <span class="p">[[</span><span class="n">pds_ab</span><span class="o">.</span><span class="n">value</span> <span class="o">*</span> <span class="mi">10</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="n">dic_saison</span><span class="p">[</span><span class="n">saison</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> <span class="n">dic_expo_lum</span><span class="p">[</span><span class="n">expo_lum</span><span class="o">.</span><span class="n">value</span><span class="p">],</span>  
-                         <span class="n">dic_orientation</span><span class="p">[</span><span class="n">orientation</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> <span class="n">dic_race</span><span class="p">[</span><span class="n">race</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> <span class="n">prec</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">hum</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> 
-                         <span class="n">temp</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">prec1</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">prec2</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">prec3</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">hum1</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">hum2</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">hum3</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">temp1</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">temp2</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> 
-                         <span class="n">temp3</span><span class="o">.</span><span class="n">value</span><span class="p">]]</span>
-            
-            
-            <span class="n">pred</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">list_pred</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">name_column</span><span class="p">)</span>
-            
-            
-            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;info_tot_ab.csv&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">decimal</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
-            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">])</span>
-            <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-            <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;semaine1&quot;</span><span class="p">,</span> <span class="s2">&quot;semaine2&quot;</span><span class="p">,</span> <span class="s2">&quot;semaine3&quot;</span><span class="p">,</span> <span class="s2">&quot;semaine4&quot;</span><span class="p">]</span>
-            <span class="n">filtered_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">semaine</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">values</span><span class="p">)]</span>
-                        
-            <span class="n">y</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="p">[</span><span class="s2">&quot;num_jour&quot;</span><span class="p">]</span>
-            <span class="n">X</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">pred_num_jour</span><span class="p">(</span><span class="n">pds_ab</span><span class="o">.</span><span class="n">value</span> <span class="o">*</span> <span class="mi">10</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="n">race</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">saison</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">prec</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">hum</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> 
+                                <span class="n">temp</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 
-            <span class="n">col_sup</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;num_jour&quot;</span><span class="p">,</span> <span class="s2">&quot;semaine&quot;</span><span class="p">,</span> <span class="s2">&quot;site_lot_nbab&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;nbab&quot;</span> <span class="p">,</span><span class="s2">&quot;cadre&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_mort&quot;</span><span class="p">,</span> <span class="s2">&quot;origine&quot;</span><span class="p">,</span> <span class="s2">&quot;lot&quot;</span><span class="p">,</span> 
-                       <span class="s2">&quot;site&quot;</span><span class="p">,</span> <span class="s2">&quot;Departement&quot;</span><span class="p">,</span> <span class="s2">&quot;Region&quot;</span><span class="p">,</span> <span class="s2">&quot;meteo_km&quot;</span><span class="p">,</span> <span class="s2">&quot;alt_site_m&quot;</span><span class="p">,</span> <span class="s2">&quot;alt_meteo_m&quot;</span><span class="p">,</span> <span class="s2">&quot;somme_precipitation_3&quot;</span><span class="p">,</span>
-                       <span class="s2">&quot;somme_precipitation_7&quot;</span><span class="p">,</span> <span class="s2">&quot;temp_12h&quot;</span><span class="p">,</span> <span class="s2">&quot;expo_vent&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">]</span>
-
-            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">col_sup</span> <span class="p">:</span>
-                <span class="k">del</span> <span class="n">X</span><span class="p">[</span><span class="n">e</span><span class="p">]</span>
-            
-            <span class="n">col_categorie</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;saison_exp&quot;</span><span class="p">,</span> <span class="s2">&quot;expo_lum&quot;</span><span class="p">,</span> <span class="s2">&quot;orientation&quot;</span><span class="p">,</span> <span class="s2">&quot;race&quot;</span><span class="p">]</span>
-
-            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">col_categorie</span> <span class="p">:</span>
-                <span class="n">X</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">e</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
-            
-            
-            <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-            <span class="n">df</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
-            <span class="n">df</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-            <span class="n">y_predict</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-            <span class="n">acc</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_predict</span><span class="p">)</span>
-
-            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span> 
-                <span class="n">Xs_train</span><span class="p">,</span> <span class="n">Xs_test</span><span class="p">,</span> <span class="n">ys_train</span><span class="p">,</span> <span class="n">ys_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-                <span class="n">dfs</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
-                <span class="n">dfs</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xs_train</span><span class="p">,</span> <span class="n">ys_train</span><span class="p">)</span>
-                <span class="n">ys_predict</span> <span class="o">=</span> <span class="n">dfs</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Xs_test</span><span class="p">)</span>
-                <span class="n">accs</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">ys_test</span><span class="p">,</span><span class="n">ys_predict</span><span class="p">)</span>
-
-                <span class="k">if</span> <span class="n">accs</span> <span class="o">&gt;</span> <span class="n">acc</span> <span class="p">:</span> 
-                    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">Xs_train</span><span class="p">,</span> <span class="n">Xs_test</span><span class="p">,</span> <span class="n">ys_train</span><span class="p">,</span> <span class="n">ys_test</span>
-                    <span class="n">df</span> <span class="o">=</span> <span class="n">dfs</span>
-                    <span class="n">y_predict</span> <span class="o">=</span> <span class="n">ys_predict</span>
-                    <span class="n">acc</span> <span class="o">=</span> <span class="n">accs</span>
-                    
-            
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Les abeilles sont mortes il y a environ&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pred</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;jours avec une fiabilité de&quot;</span><span class="p">,</span> 
-                  <span class="nb">str</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_predict</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">],</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
-
-            
-            <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;Courbe_ML.png&#39;</span><span class="p">))</span>
+            <span class="n">image_nom</span> <span class="o">=</span> <span class="s2">&quot;ML/Courbe/&quot;</span> <span class="o">+</span> <span class="n">saison</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span> <span class="o">+</span> <span class="n">race</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="s2">&quot;_ML&quot;</span><span class="o">+</span> <span class="s2">&quot;.png&quot;</span>
+            <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">image_nom</span><span class="p">))</span>
 </pre></div>
 
     </div>

@@ -13159,19 +13159,12 @@ div#notebook {
     
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Collecting sklearn
-  Using cached sklearn-0.0-py2.py3-none-any.whl
-Collecting scikit-learn
-  Using cached scikit_learn-0.24.2-cp37-cp37m-manylinux2010_x86_64.whl (22.3 MB)
-Collecting scipy&gt;=0.19.1
-  Using cached scipy-1.7.1-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (28.5 MB)
+<pre>Requirement already satisfied: sklearn in /srv/conda/envs/notebook/lib/python3.7/site-packages (0.0)
+Requirement already satisfied: scikit-learn in /srv/conda/envs/notebook/lib/python3.7/site-packages (from sklearn) (0.24.2)
+Requirement already satisfied: joblib&gt;=0.11 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.0.1)
 Requirement already satisfied: numpy&gt;=1.13.3 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.21.2)
-Collecting threadpoolctl&gt;=2.0.0
-  Using cached threadpoolctl-2.2.0-py3-none-any.whl (12 kB)
-Collecting joblib&gt;=0.11
-  Using cached joblib-1.0.1-py3-none-any.whl (303 kB)
-Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn, sklearn
-Successfully installed joblib-1.0.1 scikit-learn-0.24.2 scipy-1.7.1 sklearn-0.0 threadpoolctl-2.2.0
+Requirement already satisfied: scipy&gt;=0.19.1 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.7.1)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /srv/conda/envs/notebook/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (2.2.0)
 </pre>
 </div>
 </div>
@@ -13190,7 +13183,7 @@ Successfully installed joblib-1.0.1 scikit-learn-0.24.2 scipy-1.7.1 sklearn-0.0 
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">Label_ab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Poids 300 abeilles en g&#39;</span><span class="p">)</span>
+<span class="n">Label_ab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Poids 300 abeilles en g   (compris entre 55.3 g et 3.8 g)&#39;</span><span class="p">)</span>
 <span class="n">pds_ab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
 </pre></div>
 
@@ -13210,7 +13203,7 @@ Successfully installed joblib-1.0.1 scikit-learn-0.24.2 scipy-1.7.1 sklearn-0.0 
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
 <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le poids moyen d&#39;une abeilles est de &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; mg&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le poids moyen d&#39;une abeille est de &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; mg&quot;</span><span class="p">)</span>
 
 <span class="n">out</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">interactive_output</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="n">pds_ab</span><span class="p">})</span>
 
@@ -13349,22 +13342,29 @@ Successfully installed joblib-1.0.1 scikit-learn-0.24.2 scipy-1.7.1 sklearn-0.0 
     <span class="n">data_nom</span> <span class="o">=</span> <span class="s2">&quot;ML/Donnee/&quot;</span> <span class="o">+</span> <span class="n">saison</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span> <span class="o">+</span> <span class="n">race</span> <span class="o">+</span> <span class="s2">&quot;_ML&quot;</span> <span class="o">+</span> <span class="s2">&quot;.csv&quot;</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_nom</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">decimal</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
     
-    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;pdsab_calc&quot;</span><span class="p">]):</span>
-        <span class="k">if</span> <span class="n">pds</span> <span class="o">&gt;</span> <span class="n">p</span> <span class="p">:</span>
-            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
-                <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes entre hier et aujourd&#39;hui&quot;</span>
-            
-            <span class="k">else</span> <span class="p">:</span>
-                <span class="n">dist_j</span> <span class="o">=</span> <span class="n">pds</span> <span class="o">-</span> <span class="n">p</span> 
-                <span class="n">dist_j1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pdsab_calc&quot;</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">pds</span>
-                
-                <span class="k">if</span> <span class="n">dist_j</span> <span class="o">&lt;=</span> <span class="n">dist_j1</span> <span class="p">:</span>
-                    <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes depuis &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;num_jour&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; jours&quot;</span>
-                
+    <span class="k">if</span> <span class="n">pds</span> <span class="o">&gt;</span> <span class="mf">184.38</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Le poids entré est trop élevé. Etes-vous sûr d&#39;avoir pesé 300 abeilles ?&quot;</span>
+    
+    <span class="k">elif</span> <span class="n">pds</span> <span class="o">&lt;</span> <span class="mf">12.66</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Le poids entré est trop faible. Etes-vous sûr d&#39;avoir pesé 300 abeilles ?&quot;</span>
+    
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;pdsab_calc&quot;</span><span class="p">]):</span>
+            <span class="k">if</span> <span class="n">pds</span> <span class="o">&gt;</span> <span class="n">p</span> <span class="p">:</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+                    <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes entre hier et aujourd&#39;hui&quot;</span>
+
                 <span class="k">else</span> <span class="p">:</span>
-                    <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes depuis &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;num_jour&quot;</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; jours&quot;</span>
-                
-    <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes il y a plus de 30 jours&quot;</span>
+                    <span class="n">dist_j</span> <span class="o">=</span> <span class="n">pds</span> <span class="o">-</span> <span class="n">p</span> 
+                    <span class="n">dist_j1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pdsab_calc&quot;</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">pds</span>
+
+                    <span class="k">if</span> <span class="n">dist_j</span> <span class="o">&lt;=</span> <span class="n">dist_j1</span> <span class="p">:</span>
+                        <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes depuis &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;num_jour&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; jours&quot;</span>
+
+                    <span class="k">else</span> <span class="p">:</span>
+                        <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes depuis &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;num_jour&quot;</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; jours&quot;</span>
+
+        <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes il y a plus de 30 jours&quot;</span>
 </pre></div>
 
     </div>
@@ -13475,22 +13475,29 @@ Successfully installed joblib-1.0.1 scikit-learn-0.24.2 scipy-1.7.1 sklearn-0.0 
     <span class="n">data_nom</span> <span class="o">=</span> <span class="s2">&quot;MNL/Donnee/&quot;</span> <span class="o">+</span> <span class="n">saison</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span> <span class="o">+</span> <span class="n">race</span> <span class="o">+</span> <span class="s2">&quot;_MNL&quot;</span> <span class="o">+</span> <span class="s2">&quot;.csv&quot;</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_nom</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">decimal</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
     
-    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;pdsab_calc&quot;</span><span class="p">]):</span>
-        <span class="k">if</span> <span class="n">pds</span> <span class="o">&gt;</span> <span class="n">p</span> <span class="p">:</span>
-            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
-                <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes entre hier et aujourd&#39;hui&quot;</span>
-            
-            <span class="k">else</span> <span class="p">:</span>
-                <span class="n">dist_j</span> <span class="o">=</span> <span class="n">pds</span> <span class="o">-</span> <span class="n">p</span> 
-                <span class="n">dist_j1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pdsab_calc&quot;</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">pds</span>
-                
-                <span class="k">if</span> <span class="n">dist_j</span> <span class="o">&lt;=</span> <span class="n">dist_j1</span> <span class="p">:</span>
-                    <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes depuis &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;num_jour&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; jours&quot;</span>
-                
+    <span class="k">if</span> <span class="n">pds</span> <span class="o">&gt;</span> <span class="mf">184.38</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Le poids entré est trop élevé. Etes-vous sûr d&#39;avoir pesé 300 abeilles ?&quot;</span>
+    
+    <span class="k">elif</span> <span class="n">pds</span> <span class="o">&lt;</span> <span class="mf">12.66</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Le poids entré est trop faible. Etes-vous sûr d&#39;avoir pesé 300 abeilles ?&quot;</span>
+    
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;pdsab_calc&quot;</span><span class="p">]):</span>
+            <span class="k">if</span> <span class="n">pds</span> <span class="o">&gt;</span> <span class="n">p</span> <span class="p">:</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+                    <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes entre hier et aujourd&#39;hui&quot;</span>
+
                 <span class="k">else</span> <span class="p">:</span>
-                    <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes depuis &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;num_jour&quot;</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; jours&quot;</span>
-                
-    <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes il y a plus de 30 jours&quot;</span>
+                    <span class="n">dist_j</span> <span class="o">=</span> <span class="n">pds</span> <span class="o">-</span> <span class="n">p</span> 
+                    <span class="n">dist_j1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pdsab_calc&quot;</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">pds</span>
+
+                    <span class="k">if</span> <span class="n">dist_j</span> <span class="o">&lt;=</span> <span class="n">dist_j1</span> <span class="p">:</span>
+                        <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes depuis &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;num_jour&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; jours&quot;</span>
+
+                    <span class="k">else</span> <span class="p">:</span>
+                        <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes depuis &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;num_jour&quot;</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; jours&quot;</span>
+
+        <span class="k">return</span> <span class="s2">&quot;Les abeilles sont mortes il y a plus de 30 jours&quot;</span>
 </pre></div>
 
     </div>
@@ -13841,6 +13848,23 @@ Successfully installed joblib-1.0.1 scikit-learn-0.24.2 scipy-1.7.1 sklearn-0.0 
 
 </div>
 
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="nbinteract-hide_in
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 

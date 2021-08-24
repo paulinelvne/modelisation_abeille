@@ -1,5 +1,5 @@
 {
-  "base_url": "/binder/jupyter/user/paulinelvne-modelisation_abeille-bsiefz7r/",
+  "base_url": "/user/paulinelvne-modelisation_abeille-0qf15kdd/",
   "hostname": "0.0.0.0",
   "notebook_dir": "/home/jovyan",
   "password": false,
@@ -7,6 +7,6 @@
   "port": 8888,
   "secure": false,
   "sock": "",
-  "token": "Cs1utpt8Qji5ljlJtBGWCg",
-  "url": "http://0.0.0.0:8888/binder/jupyter/user/paulinelvne-modelisation_abeille-bsiefz7r/"
+  "token": "FVsc-XYWRvOqVfDH1TjvCQ",
+  "url": "http://0.0.0.0:8888/user/paulinelvne-modelisation_abeille-0qf15kdd/"
 }

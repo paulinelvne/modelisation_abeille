@@ -518,3 +518,59 @@ TermSocket.open: 1
 TermSocket.open: Opened 1
 [W 14:46:50.617 NotebookApp] Culling 'idle' kernel 'python3' (fcd064d5-8872-4710-87e6-8a3cf69f9bab) with 0 connections due to 654 seconds of inactivity.
 [I 14:46:50.619 NotebookApp] Kernel shutdown: fcd064d5-8872-4710-87e6-8a3cf69f9bab
+[W 2021-08-24 13:11:21.931 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-24 13:11:21.931 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-24 13:11:21.931 LabApp] 'base_url' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-24 13:11:21.931 LabApp] 'token' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-24 13:11:21.931 LabApp] 'trust_xheaders' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-24 13:11:21.931 LabApp] 'allow_origin' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-24 13:11:21.931 LabApp] 'allow_origin_pat' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-24 13:11:21.932 LabApp] 'extra_template_paths' was found in both NotebookApp and ServerApp. This is likely a recent change. This config will only be set in NotebookApp. Please check if you should also config these traits in ServerApp for your purpose.
+[W 2021-08-24 13:11:21.932 LabApp] 'jinja_template_vars' was found in both NotebookApp and ServerApp. This is likely a recent change. This config will only be set in NotebookApp. Please check if you should also config these traits in ServerApp for your purpose.
+[W 2021-08-24 13:11:21.932 LabApp] 'shutdown_no_activity_timeout' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-24 13:11:21.932 LabApp] 'tornado_settings' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-08-24 13:11:21.932 LabApp] 'tornado_settings' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[I 2021-08-24 13:11:21.940 LabApp] JupyterLab extension loaded from /srv/conda/envs/notebook/lib/python3.7/site-packages/jupyterlab
+[I 2021-08-24 13:11:21.940 LabApp] JupyterLab application directory is /srv/conda/envs/notebook/share/jupyter/lab
+[I 13:11:21.953 NotebookApp] nteract extension loaded from /srv/conda/envs/notebook/lib/python3.7/site-packages/nteract_on_jupyter
+[I 13:11:21.956 NotebookApp] Will shut down after 600 seconds with no kernels or terminals.
+[I 13:11:21.956 NotebookApp] Serving notebooks from local directory: /home/jovyan
+[I 13:11:21.956 NotebookApp] Jupyter Notebook 6.2.0 is running at:
+[I 13:11:21.957 NotebookApp] http://jupyter-paulinelvne-2dmodelisation-5fabeille-2d0qf15kdd:8888/user/paulinelvne-modelisation_abeille-0qf15kdd/?token=...
+[I 13:11:21.957 NotebookApp]  or http://127.0.0.1:8888/user/paulinelvne-modelisation_abeille-0qf15kdd/?token=...
+[I 13:11:21.957 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 13:11:21.961 NotebookApp] No web browser found: could not locate runnable browser.
+[I 13:11:21.965 NotebookApp] 302 GET /user/paulinelvne-modelisation_abeille-0qf15kdd/ (10.0.16.12) 2.070000ms
+[I 13:11:27.237 NotebookApp] 302 GET /user/paulinelvne-modelisation_abeille-0qf15kdd/?token=FVsc-XYWRvOqVfDH1TjvCQ (37.58.186.129) 0.890000ms
+[I 13:38:01.136 NotebookApp] Saving file at /ML/Courbe/hiver_hybride_ML.png
+[I 13:38:03.082 NotebookApp] Saving file at /ML/Courbe/hiver_noire_ML.png
+[I 13:38:04.961 NotebookApp] Saving file at /ML/Courbe/printemps_hybride_ML.png
+[I 13:38:06.326 NotebookApp] Saving file at /ML/Courbe/printemps_noire_ML.png
+[I 13:40:09.016 NotebookApp] Saving file at /ML/Donnee/hiver_hybride_ML.csv
+[I 13:40:11.267 NotebookApp] Saving file at /ML/Donnee/hiver_noire_ML.csv
+[I 13:40:12.942 NotebookApp] Saving file at /ML/Donnee/printemps_hybride_ML.csv
+[I 13:40:14.907 NotebookApp] Saving file at /ML/Donnee/printemps_noire_ML.csv
+[I 13:40:44.043 NotebookApp] Kernel started: 20017c5f-4447-4967-9ba3-31a7ab1f193e, name: python3
+[I 13:40:44.044 NotebookApp] Culling kernels with idle durations > 600 seconds at 60 second intervals ...
+[I 13:40:44.044 NotebookApp] Culling kernels even with connected clients
+[I 13:42:44.328 NotebookApp] Saving file at /Predictions_mort_abeilles.ipynb
+[W 13:53:44.045 NotebookApp] Culling 'idle' kernel 'python3' (20017c5f-4447-4967-9ba3-31a7ab1f193e) with 1 connections due to 623 seconds of inactivity.
+[I 13:53:44.055 NotebookApp] Kernel shutdown: 20017c5f-4447-4967-9ba3-31a7ab1f193e
+[W 13:53:46.117 NotebookApp] 410 DELETE /user/paulinelvne-modelisation_abeille-0qf15kdd/api/sessions/71374ef0-dec4-4e2a-9939-fd53e44b9d04 (37.58.186.129): Kernel deleted before session
+[W 13:53:46.117 NotebookApp] Kernel deleted before session
+[W 13:53:46.118 NotebookApp] 410 DELETE /user/paulinelvne-modelisation_abeille-0qf15kdd/api/sessions/71374ef0-dec4-4e2a-9939-fd53e44b9d04 (37.58.186.129) 3.530000ms referer=https://hub.gke2.mybinder.org/user/paulinelvne-modelisation_abeille-0qf15kdd/notebooks/Predictions_mort_abeilles.ipynb
+[W 13:58:25.059 NotebookApp] 404 DELETE /user/paulinelvne-modelisation_abeille-0qf15kdd/api/sessions/71374ef0-dec4-4e2a-9939-fd53e44b9d04 (37.58.186.129): Session not found: session_id='71374ef0-dec4-4e2a-9939-fd53e44b9d04'
+[W 13:58:25.059 NotebookApp] Session not found: session_id='71374ef0-dec4-4e2a-9939-fd53e44b9d04'
+[W 13:58:25.060 NotebookApp] 404 DELETE /user/paulinelvne-modelisation_abeille-0qf15kdd/api/sessions/71374ef0-dec4-4e2a-9939-fd53e44b9d04 (37.58.186.129) 1.960000ms referer=https://hub.gke2.mybinder.org/user/paulinelvne-modelisation_abeille-0qf15kdd/notebooks/Predictions_mort_abeilles.ipynb
+[I 13:58:25.246 NotebookApp] Kernel started: 50af3d3f-80d4-4430-910b-ca19f9bc1acd, name: python3
+[I 14:00:44.460 NotebookApp] Saving file at /Predictions_mort_abeilles.ipynb
+[I 14:02:44.323 NotebookApp] Saving file at /Predictions_mort_abeilles.ipynb
+[I 14:04:44.622 NotebookApp] Saving file at /Predictions_mort_abeilles.ipynb
+[IPKernelApp] WARNING | No such comm: ef5adba6bc4e45e48607861fb4313370
+[IPKernelApp] WARNING | No such comm: ef5adba6bc4e45e48607861fb4313370
+[IPKernelApp] WARNING | No such comm: ef5adba6bc4e45e48607861fb4313370
+[IPKernelApp] WARNING | No such comm: ef5adba6bc4e45e48607861fb4313370
+[I 14:06:09.601 NotebookApp] Saving file at /Predictions_mort_abeilles.ipynb
+[I 14:06:14.684 NotebookApp] New terminal with automatic name: 1
+TermSocket.open: 1
+TermSocket.open: Opened 1
